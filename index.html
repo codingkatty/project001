@@ -17,6 +17,17 @@
             line-height: 1.6;
             background-color: #f6f5f7;
             color: #333;
+            cursor: none;
+        }
+
+        #custom-cursor {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #a7c7e7;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
         }
 
         header {
@@ -48,6 +59,7 @@
             font-size: 14px;
             letter-spacing: 1px;
             transition: background 0.3s ease;
+            cursor: pointer;
         }
 
         nav a:hover {
@@ -93,8 +105,8 @@
             display: none;
         }
 
-        .active {
-            display: block;
+        .PAGE {
+            display: none;
         }
 
         /* Pastel Color Palette */
@@ -113,29 +125,30 @@
     </style>
 </head>
 <body>
+    <div id="custom-cursor"></div>
 
     <header>
         <h1>Candy is a <u>Cat</u>.</h1>
     </header>
 
     <nav>
-        <a onclick="showPage(event, 'home')">Home</a>
-        <a onclick="showPage(event, 'about')">About</a>
-        <a onclick="showPage(event, 'contact')">Contact</a>
+        <a onclick="changePage(1)">Home</a>
+        <a onclick="changePage(2)">About</a>
+        <a onclick="changePage(3)">Contact</a>
     </nav>
 
     <div class="container">
-        <div id="home" class="active">
+        <div id="home" class="PAGE">
             <h2>Welcome to Our World</h2>
-            <p>Immerse yourself in a world where simplicity meets beauty. Our pastel-themed design brings calm and creativity to your browsing experience. Feel free to explore our pages and discover more about what we do.</p>
+            <p>Hi there! Candy here. This is where I put my coding projects. Hope ya like it! Right now, I have nothing, so that's why you see this page :)</p>
         </div>
-        <div id="about">
+        <div id="about" class="PAGE">
             <h2>About Us</h2>
-            <p>We believe in the power of subtlety. From soft tones to minimalist layouts, we create designs that reflect clarity and elegance. Our goal is to bring tranquility to your digital journey, one pastel shade at a time.</p>
+            <p>A grade 7 kiddo tryna code :P <br>Right now, I've learned quite a few languages, and I want to learn React in the future.</p>
         </div>
-        <div id="contact">
+        <div id="contact" class="PAGE">
             <h2>Get in Touch</h2>
-            <p>If you’d like to know more about our work or collaborate with us, don’t hesitate to reach out. We’re always open to new ideas and fresh conversations.</p>
+            <p>If you’d like to know more about our work or collaborate with me, don’t hesitate to reach out. We’re always open to new ideas and fresh conversations. (Not now tho)</p>
         </div>
     </div>
 
@@ -144,12 +157,27 @@
     </footer>
 
     <script>
-        function showPage(event, pageId) {
-            event.preventDefault();
-            const pages = document.querySelectorAll('.container > div');
-            pages.forEach(page => page.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
+        var getPages = document.getElementsByClassName("PAGE");
+
+        function changePage(index) {
+            for(var i = 0; i < getPages.length; i++){
+                getPages[i].style.display = "none";
+            }
+            
+            getPages[index - 1].style.display = "block";
+            
+            window.scroll(0, 0);
         }
+        
+        changePage(1);
+
+        // Custom cursor
+        const cursor = document.getElementById('custom-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
     </script>
 
 </body>
