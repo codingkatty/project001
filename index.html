@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Placeholder</title>
+    <title>Candy</title>
     <style>
         * {
             margin: 0;
@@ -13,16 +13,14 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f9;
+            background-color: #f6f5f7;
             color: #333;
-            padding: 0;
-            margin: 0;
         }
 
         header {
-            background-color: #333;
+            background-color: #a7c7e7;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -30,12 +28,13 @@
 
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px;
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         nav {
-            background: #444;
+            background-color: #d4a5a5;
             display: flex;
             justify-content: center;
             padding: 10px;
@@ -48,22 +47,37 @@
             text-transform: uppercase;
             font-size: 14px;
             letter-spacing: 1px;
+            transition: background 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #555;
+            background-color: #c19da9;
         }
 
         .container {
-            padding: 20px;
+            padding: 40px;
             text-align: center;
         }
 
+        .container h2 {
+            color: #6d6875;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            font-size: 16px;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
         footer {
-            background-color: #333;
+            background-color: #a7c7e7;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -71,7 +85,7 @@
 
         footer p {
             margin: 0;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         /* Page-specific content placeholders */
@@ -82,12 +96,26 @@
         .active {
             display: block;
         }
+
+        /* Pastel Color Palette */
+        body {
+            background-color: #f6f5f7; /* Light grey/purple */
+        }
+        #home {
+            background-color: #e9d8a6; /* Soft yellow */
+        }
+        #about {
+            background-color: #bde0fe; /* Light sky blue */
+        }
+        #contact {
+            background-color: #ffc8dd; /* Pale pink */
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Minimalist Website</h1>
+        <h1>Candy is a <u>Cat</u>.</h1>
     </header>
 
     <nav>
@@ -98,21 +126,21 @@
 
     <div class="container">
         <div id="home" class="active">
-            <h2>Welcome to the Home Page</h2>
-            <p>This is a placeholder for your home content.</p>
+            <h2>Welcome to Our World</h2>
+            <p>Immerse yourself in a world where simplicity meets beauty. Our pastel-themed design brings calm and creativity to your browsing experience. Feel free to explore our pages and discover more about what we do.</p>
         </div>
         <div id="about">
             <h2>About Us</h2>
-            <p>This is a placeholder for your about content.</p>
+            <p>We believe in the power of subtlety. From soft tones to minimalist layouts, we create designs that reflect clarity and elegance. Our goal is to bring tranquility to your digital journey, one pastel shade at a time.</p>
         </div>
         <div id="contact">
-            <h2>Contact Us</h2>
-            <p>This is a placeholder for your contact content.</p>
+            <h2>Get in Touch</h2>
+            <p>If you’d like to know more about our work or collaborate with us, don’t hesitate to reach out. We’re always open to new ideas and fresh conversations.</p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Minimalist Website. All Rights Reserved.</p>
+        <p>&copy; 2024 Pastel Minimalist. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -125,4 +153,3 @@
 
 </body>
 </html>
-
