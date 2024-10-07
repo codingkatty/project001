@@ -119,9 +119,9 @@
     </header>
 
     <nav>
-        <a href="#" onclick="showPage('home')">Home</a>
-        <a href="#" onclick="showPage('about')">About</a>
-        <a href="#" onclick="showPage('contact')">Contact</a>
+        <a onclick="showPage(event, 'home')">Home</a>
+        <a onclick="showPage(event, 'about')">About</a>
+        <a onclick="showPage(event, 'contact')">Contact</a>
     </nav>
 
     <div class="container">
@@ -140,11 +140,12 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Pastel Minimalist. All Rights Reserved.</p>
+        <p>&copy; 2024 Candy. All Rights Reserved.</p>
     </footer>
 
     <script>
-        function showPage(pageId) {
+        function showPage(event, pageId) {
+            event.preventDefault();
             const pages = document.querySelectorAll('.container > div');
             pages.forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
